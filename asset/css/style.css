@@ -729,39 +729,138 @@ footer {
 }
 
 @media screen and (min-width :768px) and (max-width :1200px) {
-    html {
-        margin-left: 2em;
+    body {
+        margin: 5px;
     }
-
-    /* partie nav */
-    .menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0em 2em;
-        width: 100%;
-        margin-bottom: 50px;
+    header {
+        margin: 10px;
     }
-
-    .inscription {
-        grid-area: 1 / 2 / 2 / 3;
-        order: 2;
-        justify-self: end;
-        padding-right: 20px;
+    .navpc {
+        display: none;
     }
-
-    .menubb {
-        padding-top: 0rem;
+    .navmobil {
         display: flex;
+        flex-direction: column;
+        
+    }
+    .menu a:hover {
+        color: #0065FC;
+        border-bottom: #0065FC 2px solid;
+        border-top: none; }
+        .logo img{
+            width: 180px;
+            height: 90px;    
+        }
+        .logoinscription {
+          display: flex; 
+          width: 100%;
+          justify-content: space-between;
+        }
+        .logoinscription a{
+            font-size: 25px;
+        }
+        .menubb{
+            display: flex;
+            padding: 15px;        
+        } 
+        .menu a{
+            font-size: 25px;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-around;
+                    }  
+    html {
+        margin: 2em;
+    }
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 30px;        
+    }
+    /* barre de recherche ville */
+    .searchbar {
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    .town {
+        width: 15em;
+    
+    }
+    .searchicon {
+        background-color: #F2F2F2;
+        padding: 20px 20px;
+        text-align: center;
+        border-radius: 15px 0px 0px 15px;
+    }
+    .searchicon i {
+        display: flex;
+        width: 15px;
+        margin: auto;
+        font-size: 30px;
+    }
+    .town {
+        border-right: none;
+        border-left: none;
+        font-weight: 700;
+        padding: 0 24px;
+        box-sizing: border-box;
+        width: 20rem;
+        border-top: #F2F2F2 1px solid;
+        border-bottom: #F2F2F2 1px solid;
+    }
+    .town::placeholder {
+        font-size:25px;
+        color: black;
+        padding: 16px 20px;
+    }
+    .pc-only {
+        display: none;
+    }
+    .mobil-only {
+        display: inline-block;
+        background-color: #0065FC;
+        color: white;
+        border: none;
+        font-weight: bold;    
+        padding: 0px 17.5px 0px 17.5px;
+        font-size: 1.5rem;
+        border-radius: 15px 15px 15px 15px;
+    }
+    .mobil-only i {
+       margin: auto;
+    }
+    /* filtres */
+    .filter-choice {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    .filter {
+        width: 100%;
+        padding: 10px;
+    }
+    .filter-choice a {
+        padding: 0em;
+        /* margin-bottom: 15px */
+    }
+    .choice {
+        margin: 10px;
+    }
+    .choice span{
+        font-size: 20px;
     }
 
-    #logo {
-        width: 70%;
-        height: 4em;
-        grid-area: 1 / 1 / 2 / 2;
-        padding-left: 20px;
+    /* ligne info */
+    #info {
+        display: flex;
+             
     }
 
-    /* partie hebergement */
+        /* partie hebergement */
     section {
         display: flex;
         flex-direction: column-reverse;
@@ -776,18 +875,20 @@ footer {
     }
 
     #lodgingall {
-        width: 95%;
+        width: 100%;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 0em 0em;
+        grid-gap: 2em 2em;
     }
 
     .lodging {
         width: 100%;
         height: 20em;
     }
-
+    .lodgingname {
+        font-size:25px;
+    }
     .lodging img {
         width: 95%;
         height: 12em;
@@ -797,7 +898,7 @@ footer {
     /* partie les plus populaires */
     #popularlog {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr ;
         margin-top: 1.5rem;
     }
 
@@ -814,17 +915,22 @@ footer {
 
     .popular a {
         width: 90%;
-        display: grid;
         margin: auto;
         display: grid;
     }
 
     .price {
         margin-top: 20px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .star i{
+        font-size: 15px;
     }
 
     #am {
         margin-top: 2em;
+        font-size: 25px;
     }
 
     /* partie activités */
@@ -848,6 +954,9 @@ footer {
         width: 100%;
         height: 17em;
         margin: auto;
+    }
+    figcaption{
+        font-size: 25px;
     }
 
 }
