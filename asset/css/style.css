@@ -192,7 +192,7 @@ h2 {
     border: #DEEBFF 1px solid;
     background-color: #0065FC;
     color: white;
-    margin-right: 1em;
+   margin: 0;
 }
 /* section 1 */
 /* titre de la section */
@@ -567,6 +567,7 @@ footer {
         width: auto;
         margin: auto;
         margin-right: 10px;
+        margin-left: 0;
     }
     h3 {
         width: auto;
@@ -711,6 +712,9 @@ footer {
         width: 97%;
         margin: auto;
     }
+    #activitiesall a{
+        margin-right: 0;
+    }
 
     .activity2 img {
         width: 100%;
@@ -729,11 +733,15 @@ footer {
 }
 
 @media screen and (min-width :768px) and (max-width :1200px) {
-    body {
-        margin: 5px;
-    }
-    header {
-        margin: 10px;
+    
+
+    /* partie nav */
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0em 2em;
+        width: 100%;
+        margin-bottom: 50px;
     }
     .navpc {
         display: none;
@@ -746,91 +754,27 @@ footer {
     .menu a:hover {
         color: #0065FC;
         border-bottom: #0065FC 2px solid;
-        border-top: none; }
-        .logo img{
-            width: 180px;
-            height: 90px;    
-        }
-        .logoinscription {
-          display: flex; 
-          width: 100%;
-          justify-content: space-between;
-        }
-        .logoinscription a{
-            font-size: 25px;
-        }
-        .menubb{
-            display: flex;
-            padding: 15px;        
-        } 
-        .menu a{
-            font-size: 25px;
-        }
-        .menu{
-            display: flex;
-            justify-content: space-around;
-                    }  
-    html {
-        margin: 2em;
+        border-top: none;
     }
-    h1{
-        font-size: 35px;
+    .logo img{
+        width: 150px;
+        height: 70px;    
     }
-    h2{
-        font-size: 30px;        
+    .logoinscription {
+      display: flex; 
+      width: 100%;
+      justify-content: space-between;
     }
-    /* barre de recherche ville */
-    .searchbar {
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 10px;
-    }
-    .town {
-        width: 15em;
     
-    }
-    .searchicon {
-        background-color: #F2F2F2;
-        padding: 20px 20px;
-        text-align: center;
-        border-radius: 15px 0px 0px 15px;
-    }
-    .searchicon i {
+    .menubb {
+        padding-top: 0rem;
         display: flex;
-        width: 15px;
-        margin: auto;
-        font-size: 30px;
     }
-    .town {
-        border-right: none;
-        border-left: none;
-        font-weight: 700;
-        padding: 0 24px;
-        box-sizing: border-box;
-        width: 20rem;
-        border-top: #F2F2F2 1px solid;
-        border-bottom: #F2F2F2 1px solid;
-    }
-    .town::placeholder {
-        font-size:25px;
-        color: black;
-        padding: 16px 20px;
-    }
-    .pc-only {
-        display: none;
-    }
-    .mobil-only {
-        display: inline-block;
-        background-color: #0065FC;
-        color: white;
-        border: none;
-        font-weight: bold;    
-        padding: 0px 17.5px 0px 17.5px;
-        font-size: 1.5rem;
-        border-radius: 15px 15px 15px 15px;
-    }
-    .mobil-only i {
-       margin: auto;
+
+    #logo {
+        width: 70%;
+        height: 4em;
+            
     }
     /* filtres */
     .filter-choice {
@@ -845,22 +789,28 @@ footer {
     }
     .filter-choice a {
         padding: 0em;
-        /* margin-bottom: 15px */
     }
     .choice {
-        margin: 10px;
+        margin: 5px;
     }
     .choice span{
-        font-size: 20px;
+        font-size: 16px;
     }
-
     /* ligne info */
     #info {
         display: flex;
              
     }
+    #info p{
+        font-size: 15px;
+    }
+    #info i {
+        
+       
+        margin-right: 10px;
+    }
 
-        /* partie hebergement */
+    /* partie hebergement */
     section {
         display: flex;
         flex-direction: column-reverse;
@@ -872,10 +822,11 @@ footer {
     #hotel {
         border-radius: 15px 15px 15px 15px;
         width: 90%;
+        margin-right: 0;
     }
 
     #lodgingall {
-        width: 100%;
+        width: 95%;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -886,9 +837,7 @@ footer {
         width: 100%;
         height: 20em;
     }
-    .lodgingname {
-        font-size:25px;
-    }
+
     .lodging img {
         width: 95%;
         height: 12em;
@@ -900,10 +849,11 @@ footer {
         display: grid;
         grid-template-columns: 1fr ;
         margin-top: 1.5rem;
+        
     }
 
     .popular {
-        margin-left: 2em;
+        margin: 0;
         width: 95%;
         height: auto;
         background-color: white;
@@ -914,36 +864,35 @@ footer {
     }
 
     .popular a {
-        width: 90%;
-        margin: auto;
+        width: 100%;
         display: grid;
+        margin: auto;
+        
     }
 
     .price {
         margin-top: 20px;
-        font-size: 20px;
-        margin-bottom: 10px;
     }
-    .star i{
-        font-size: 15px;
+    .star{
+        display: block;
+        align-items: center;
     }
-
     #am {
         margin-top: 2em;
-        font-size: 25px;
+        margin-left: 0;
     }
 
     /* partie activités */
     .activities {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr ;
         grid-gap: 0em 0em;
     }
 
     .activity1 img {
         width: 100%;
-        height: 30em;
-        margin: auto;
+        height: 17em;
+        /* margin: auto; */
     }
 
     .activity1 {
@@ -953,10 +902,7 @@ footer {
     .activity2 img {
         width: 100%;
         height: 17em;
-        margin: auto;
-    }
-    figcaption{
-        font-size: 25px;
+        /* margin: auto; */
     }
 
 }
